@@ -4,7 +4,7 @@ import { useState } from "react"
 
 let Home = () => {
   
-  const {data: blogs, isPending, error} = useFetch("https://github.com/Habib-0007/Habsblog/blob/master/data/db.json");
+  const {data: blogs, isPending, error} = useFetch("https://api.npoint.io/9e94354d5a9a61b0807e");
   
  {/* const [postsPerPage, setPostsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
