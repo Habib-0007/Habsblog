@@ -16,7 +16,7 @@ let Create = () => {
     
     setIsPending(true);
     
-    fetch("https://api.npoint.io/d9634f01c1e54bc298d2/blogs", {
+    fetch("../data/db.json/blogs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(blog)
