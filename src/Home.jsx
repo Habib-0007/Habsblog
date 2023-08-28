@@ -4,14 +4,7 @@ import { useState } from "react"
 
 let Home = () => {
   
-  const {data: blogs, isPending, error} = useFetch("https://api.npoint.io/d9634f01c1e54bc298d2/blogs");
-  
- {/* const [postsPerPage, setPostsPerPage] = useState(5);
-  const [currentPage, setCurrentPage] = useState(1);
-  
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  blogs = blogs.slice(1, 5); */ }
+  const {data: blogs, isPending, error} = useFetch("../data/db.json/blogs")
   
   return (
     <div>
