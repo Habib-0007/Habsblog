@@ -1,10 +1,13 @@
 import BlogList from "./BlogList"
 import useFetch from "./useFetch"
 import { useState } from "react"
+import db from "../data/db.json"
 
 let Home = () => {
   
-  const {data: blogs, isPending, error} = useFetch("../data/db.json/blogs")
+  var {data: blogs, isPending, error} = useFetch(db)
+
+  var blogs = blogs.blogs;
   
   return (
     <div>
