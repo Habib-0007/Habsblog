@@ -6,7 +6,7 @@ import MarkdownEditor from '../components/MarkdownEditor';
 
 const CreatePost: React.FC = () => {
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState<string>('');
   const [images, setImages] = useState<File[]>([]);
   const navigate = useNavigate();
 

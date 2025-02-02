@@ -82,6 +82,7 @@ const UserProfile: React.FC = () => {
         <button type="submit">Update Profile</button>
       </form>
       {message && <p>{message}</p>}
+      {profilePicture && <p></p>}
     </div>
   );
 };

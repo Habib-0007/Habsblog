@@ -19,7 +19,7 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
           className="post-thumbnail"
         />
       )}
-      <Link to={`/post/${post.id}`}>Read more</Link>
+      <Link to={`/post/${post._id}`}>Read more</Link>
     </div>
   );
 };
