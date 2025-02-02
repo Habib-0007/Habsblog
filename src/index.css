@@ -1,208 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
-* {
-  border: 0;
-  margin: 0;
-  padding: none;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
-}
-
-nav {
-  max-width: 600px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  text-align: center;
-  padding: 1em;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-nav h1 {
-  color: #f13953;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul li {
-  list-style: none;
-}
-
-nav ul li:nth-child(2) {
-  margin-left: .8em;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-}
-
-nav ul li a:hover {
-  color: #f13953;
-}
-
-.content {
-  padding: 2em 1em;
-  max-width: 600px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.blog-preview {
-  padding: 1em 0.5em;
-  margin: 1em 0;
-  text-align: left;
-}
-
-.blog-preview a {
-  text-decoration: none;
-}
-
-.blog-preview a > p {
-  color: #000;
-}
-
-.blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-}
-
-.blog-preview h2 {
-  color: #f13953;
-}
-
-.blog-preview p {
-  margin-top: 0.5em;
-}
-
-.blog-view article h2 {
-  color: #f13953;
-  font-size: 2em;
-  margin: .6em 0;
-}
-
-.blog-view article p {
-  margin: .2em 0;
-  font-size: 1.2em;
-}
-
-.blog-view article div {
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-size: 1.5em;
-  margin: .6em 0 0;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.blog-view article button {
-  background: #f13953;
-  color: #fff;
-  font-size: 1.2em;
-  padding: .4em;
-  border-radius: .3em;
-  display: block;
-  margin: 1em 0;
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
-.create-new {
-  text-align: center;
-}
-
-.create-new h2 {
-  color: #f13953;
-}
-
-form {
-  margin: .5em auto 1.2em;
-  width: 320px;
-  padding: .5em;
-}
-
-form label {
-  text-align: left;
-  font-size: 1.2em;
-  display: block;
-  margin: .6em 0 .4em;
-  font-weight: 600;
-}
-
-form input, form textarea {
-  border: 1.5px solid #000;
-  display: block;
-  width: 90%;
-  padding: .2em;
-  border-radius: .3em;
-  transition: all ease-in-out .5s;
-  font-size: 1.2em;
-  caret-color: #f13953;
-  overflow: scroll;
-}
-
-form input:hover, form textarea:hover {
-  border-color: #f13953;
-}
-
-form input {
-  height: 45px;
-}
-
-form textarea {
-  height: 150px;
-}
-
-form button {
-  display: block;
-  padding: .5em;
-  margin: 1em auto;
-  background: #f13953;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 700;
-  border-radius: .3em;
-}
-
-.notfound h2 {
-  color: #f13953;
-  font-size: 2.2em;
-  margin: .3em 0;
-}
-
-.notfound p {
-  font-size: 1.6em;
-  margin-bottom: .3em;
-}
-
-.notfound a {
-  color: #000;
-  font-size: 1.3em;
-}
-
-.footer {
+body {
+  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 2em 1em;
-}  
-
-.footer ul {
-  text-align: center;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.footer ul li {
-  list-style: none;
-  padding: .3em;
-  font-size: 1.5em;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-.footer li a {
-  text-decoration: none;
-  color: #000;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
