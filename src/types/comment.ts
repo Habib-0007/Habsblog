@@ -1,12 +1,10 @@
+import type { User } from './user';
+
 export interface Comment {
   _id: string;
   content: string;
   post: string;
-  author: {
-    _id: string;
-    name: string;
-    avatar?: string;
-  };
+  author: User;
   parent?: string;
   images?: string[];
   likeCount: number;
@@ -17,16 +15,11 @@ export interface Comment {
   replies?: Comment[];
 }
 
-export interface CreateCommentData {
-  content: string;
+export interface CommentFilters {
   postId: string;
   parentId?: string;
-  images?: File[];
-}
-
-export interface UpdateCommentData {
-  content: string;
-  images?: File[];
+  page?: number;
+  limit?: number;
 }
 
 export interface CommentsResponse {
@@ -39,9 +32,4 @@ export interface CommentsResponse {
     totalPages: number;
     totalResults: number;
   };
-}
-
-export interface CommentResponse {
-  success: boolean;
-  data: Comment;
 }

@@ -1,272 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --primary: #3b82f6;
-  --primary-dark: #2563eb;
-  --secondary: #10b981;
-  --accent: #8b5cf6;
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
+  --primary: #ff5757;
+  --secondary: #5271ff;
+  --accent: #38b6ff;
+  --background: #f5f5f5;
+  --foreground: #121212;
+  --muted: #e0e0e0;
+  --muted-foreground: #666666;
   --card: #ffffff;
-  --card-foreground: #0f172a;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #3b82f6;
+  --card-foreground: #121212;
+  --border: #e0e0e0;
+  --input: #e0e0e0;
+  --ring: #5271ff;
   --radius: 0.5rem;
+
+  /* Gradient colors */
+  --gradient-1: #ff5757;
+  --gradient-2: #ff8c00;
+  --gradient-3: #5271ff;
+  --gradient-4: #38b6ff;
+  --gradient-5: #8a2be2;
+  --gradient-6: #ff1493;
 }
 
 .dark {
-  --primary: #3b82f6;
-  --primary-dark: #60a5fa;
-  --secondary: #10b981;
-  --accent: #a78bfa;
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --border: #334155;
-  --input: #334155;
-  --ring: #3b82f6;
+  --primary: #ff5757;
+  --secondary: #5271ff;
+  --accent: #38b6ff;
+  --background: #121212;
+  --foreground: #f5f5f5;
+  --muted: #2a2a2a;
+  --muted-foreground: #a0a0a0;
+  --card: #1e1e1e;
+  --card-foreground: #f5f5f5;
+  --border: #2a2a2a;
+  --input: #2a2a2a;
+  --ring: #5271ff;
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Playfair Display', serif;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
 @layer components {
-  .btn {
-    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
-    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
-    disabled:opacity-50 disabled:pointer-events-none ring-offset-background;
-  }
-  /* .btn-primary {
-    @apply bg-primary text-white hover:bg-primary-dark;
-  } */
-  .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary/90;
-  }
-  .btn-outline {
-    @apply border border-input hover:bg-accent hover:text-white;
-  }
-  .btn-ghost {
-    @apply hover:bg-muted hover:text-foreground;
-  }
-  .btn-link {
-    @apply text-primary underline-offset-4 hover:underline;
-  }
-  .btn-lg {
-    @apply h-11 px-8 rounded-md;
-  }
-  .btn-md {
-    @apply h-10 py-2 px-4;
-  }
-  .btn-sm {
-    @apply h-9 px-3 rounded-md;
-  }
-  .btn-xs {
-    @apply h-8 px-2.5 rounded-sm;
+  .neobrutalism-shadow {
+    @apply shadow-[5px_5px_0px_0px_rgba(0,0,0,1)];
   }
 
-  .input {
-    @apply flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm 
-    ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium 
-    placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 
-    focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  .neobrutalism-button {
+    @apply px-4 py-2 bg-primary text-white font-bold border-2 border-black neobrutalism-shadow transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none active:bg-primary/90;
   }
 
-  .card {
-    @apply rounded-lg border bg-card text-card-foreground shadow-sm;
+  .neobrutalism-card {
+    @apply bg-card border-2 border-black neobrutalism-shadow p-4 rounded-md;
   }
 
-  .card-header {
-    @apply flex flex-col space-y-1.5 p-6;
+  .neobrutalism-input {
+    @apply px-4 py-2 bg-white border-2 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-primary;
   }
 
-  .card-title {
-    @apply text-2xl font-semibold leading-none tracking-tight;
+  /* Enhanced gradient text styles */
+  .gradient-text {
+    @apply text-transparent bg-clip-text font-bold;
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-1),
+      var(--gradient-3)
+    );
   }
 
-  .card-description {
-    @apply text-sm text-muted-foreground;
+  .gradient-text-vibrant {
+    @apply text-transparent bg-clip-text font-bold;
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-1),
+      var(--gradient-2),
+      var(--gradient-6)
+    );
   }
 
-  .card-content {
-    @apply p-6 pt-0;
+  .gradient-text-cool {
+    @apply text-transparent bg-clip-text font-bold;
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-3),
+      var(--gradient-4),
+      var(--gradient-5)
+    );
   }
 
-  .card-footer {
-    @apply flex items-center p-6 pt-0;
+  /* Enhanced gradient backgrounds */
+  .gradient-bg {
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-1),
+      var(--gradient-3)
+    );
   }
 
-  .badge {
-    @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors 
-    focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  .gradient-bg-vibrant {
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-1),
+      var(--gradient-2),
+      var(--gradient-6)
+    );
   }
 
-  .badge-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/80;
+  .gradient-bg-cool {
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-3),
+      var(--gradient-4),
+      var(--gradient-5)
+    );
   }
 
-  .badge-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  /* Card gradients */
+  .card-gradient-subtle {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 87, 87, 0.1),
+      rgba(82, 113, 255, 0.1)
+    );
   }
 
-  .badge-outline {
-    @apply border-border bg-transparent text-foreground hover:bg-muted;
+  .card-gradient-vibrant {
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 87, 87, 0.15),
+      rgba(255, 140, 0, 0.15),
+      rgba(255, 20, 147, 0.15)
+    );
   }
 
-  .prose {
-    @apply max-w-none;
+  .card-gradient-cool {
+    background-image: linear-gradient(
+      135deg,
+      rgba(82, 113, 255, 0.15),
+      rgba(56, 182, 255, 0.15),
+      rgba(138, 43, 226, 0.15)
+    );
   }
-
-  .prose a {
-    @apply text-primary underline underline-offset-4;
-  }
-
-  .prose h1,
-  .prose h2,
-  .prose h3,
-  .prose h4 {
-    @apply font-heading font-bold text-foreground;
-  }
-
-  .prose blockquote {
-    @apply border-l-4 border-muted pl-4 italic;
-  }
-
-  .prose code {
-    @apply rounded bg-muted px-1 py-0.5 font-mono text-sm;
-  }
-
-  .prose pre {
-    @apply rounded-lg bg-muted p-4 overflow-x-auto;
-  }
-
-  .prose img {
-    @apply rounded-lg;
-  }
-
-  .prose ul {
-    @apply list-disc pl-5;
-  }
-
-  .prose ol {
-    @apply list-decimal pl-5;
-  }
-}
-
-/* Animation classes */
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.slide-up {
-  animation: slideUp 0.5s ease-in-out;
-}
-
-.slide-down {
-  animation: slideDown 0.5s ease-in-out;
-}
-
-.scale-in {
-  animation: scaleIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Editor styles */
-.markdown-editor .w-md-editor-toolbar {
-  @apply bg-card border-b border-border;
-}
-
-.markdown-editor .w-md-editor-content {
-  @apply bg-card;
-}
-
-.markdown-editor .w-md-editor-text {
-  @apply text-foreground;
-}
-
-.markdown-editor .w-md-editor-preview {
-  @apply bg-muted;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-muted;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-muted-foreground/50 rounded-full;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-muted-foreground;
 }

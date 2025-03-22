@@ -1,3 +1,5 @@
+import type { User } from './user';
+
 export interface Post {
   _id: string;
   title: string;
@@ -5,11 +7,7 @@ export interface Post {
   content: string;
   excerpt: string;
   coverImage?: string;
-  author: {
-    _id: string;
-    name: string;
-    avatar?: string;
-  };
+  author: User;
   tags: string[];
   status: 'draft' | 'published';
   viewCount: number;
@@ -18,6 +16,16 @@ export interface Post {
   createdAt: string;
   updatedAt: string;
   htmlContent?: string;
+}
+
+export interface PostFilters {
+  search?: string;
+  tag?: string;
+  author?: string;
+  status?: 'draft' | 'published';
+  sortBy?: 'newest' | 'oldest' | 'popular';
+  page?: number;
+  limit?: number;
 }
 
 export interface CreatePostData {
@@ -38,16 +46,6 @@ export interface UpdatePostData {
   status?: 'draft' | 'published';
 }
 
-export interface PostFilters {
-  search?: string;
-  tag?: string;
-  author?: string;
-  status?: 'draft' | 'published';
-  sortBy?: 'newest' | 'oldest' | 'popular';
-  page?: number;
-  limit?: number;
-}
-
 export interface PostsResponse {
   success: boolean;
   data: Post[];
@@ -58,9 +56,4 @@ export interface PostsResponse {
     totalPages: number;
     totalResults: number;
   };
-}
-
-export interface PostResponse {
-  success: boolean;
-  data: Post;
 }
