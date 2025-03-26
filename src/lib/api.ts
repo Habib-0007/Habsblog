@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { useAuthStore } from '../store/authStore';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+// const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
+const API_URL = "https://habsblog-api.vercel.app/api";
 
 const api = axios.create({
   baseURL: API_URL,
