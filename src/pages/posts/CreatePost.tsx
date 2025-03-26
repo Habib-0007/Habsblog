@@ -1,5 +1,3 @@
-'use client';
-
 import type React from 'react';
 
 import { useState } from 'react';
@@ -27,6 +25,8 @@ const CreatePost = () => {
     title?: string;
     content?: string;
   }>({});
+
+  console.log(setStatus);
 
   const navigate = useNavigate();
   const { mutate: createPost, isPending } = useCreatePost();
@@ -206,7 +206,7 @@ const CreatePost = () => {
               <Button
                 type="button"
                 onClick={handleAddTag}
-                className="ml-2"
+                className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
                 leftIcon={<Tag className="w-4 h-4" />}
               >
                 Add
@@ -228,6 +228,7 @@ const CreatePost = () => {
             <Button
               type="button"
               variant="outline"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
               onClick={(e) => handleSubmit(e, 'draft')}
               isLoading={isPending && status === 'draft'}
             >
@@ -236,6 +237,7 @@ const CreatePost = () => {
 
             <Button
               type="button"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
               onClick={(e) => handleSubmit(e, 'published')}
               isLoading={isPending && status === 'published'}
               leftIcon={<Save className="w-4 h-4" />}

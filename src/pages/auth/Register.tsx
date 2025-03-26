@@ -176,7 +176,7 @@ const Register = () => {
 
           <Button
             type="submit"
-            className="w-full"
+            className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white w-full"
             leftIcon={<UserPlus className="w-4 h-4" />}
           >
             Sign Up

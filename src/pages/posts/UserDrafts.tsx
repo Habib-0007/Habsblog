@@ -43,7 +43,12 @@ const UserDrafts = () => {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold gradient-text">Your Drafts</h1>
         <Link to="/posts/create">
-          <Button leftIcon={<Plus className="w-4 h-4" />}>New Post</Button>
+          <Button
+            className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
+            leftIcon={<Plus className="w-4 h-4" />}
+          >
+            New Post
+          </Button>
         </Link>
       </div>
 
@@ -55,7 +60,10 @@ const UserDrafts = () => {
             You don't have any draft posts. Start writing something new!
           </p>
           <Link to="/posts/create">
-            <Button leftIcon={<Plus className="w-4 h-4" />}>
+            <Button
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
+              leftIcon={<Plus className="w-4 h-4" />}
+            >
               Create New Post
             </Button>
           </Link>

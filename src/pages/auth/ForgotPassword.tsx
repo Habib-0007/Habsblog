@@ -1,5 +1,3 @@
-'use client';
-
 import type React from 'react';
 
 import { useState } from 'react';
@@ -45,7 +43,7 @@ const ForgotPassword = () => {
   if (isSubmitted) {
     return (
       <div className="max-w-md mx-auto">
-        <Card gradient className="p-8">
+        <Card gradient="cool" className="p-8">
           <div className="text-center mb-6">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Send className="w-8 h-8 text-green-500" />
@@ -77,7 +75,7 @@ const ForgotPassword = () => {
 
   return (
     <div className="max-w-md mx-auto">
-      <Card gradient className="p-8">
+      <Card gradient="cool" className="p-8">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold mb-2 gradient-text">
             Forgot Password
@@ -101,7 +99,7 @@ const ForgotPassword = () => {
 
           <Button
             type="submit"
-            className="w-full"
+            className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white w-full"
             isLoading={isSubmitting}
             leftIcon={<Send className="w-4 h-4" />}
           >

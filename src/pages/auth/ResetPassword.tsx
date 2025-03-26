@@ -60,7 +60,7 @@ const ResetPassword = () => {
 
   return (
     <div className="max-w-md mx-auto">
-      <Card gradient className="p-8">
+      <Card gradient="cool" className="p-8">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold mb-2 gradient-text">
             Reset Password
@@ -91,7 +91,7 @@ const ResetPassword = () => {
 
           <Button
             type="submit"
-            className="w-full"
+            className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white w-full"
             isLoading={isSubmitting}
             leftIcon={<Save className="w-4 h-4" />}
           >

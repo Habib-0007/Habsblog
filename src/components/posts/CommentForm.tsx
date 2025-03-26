@@ -117,6 +117,7 @@ const CommentForm = ({ postId, parentId, onSuccess }: CommentFormProps) => {
             <Button
               type="button"
               variant="outline"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
               leftIcon={<Image className="w-4 h-4" />}
               disabled={images.length >= 3}
             >
@@ -127,6 +128,7 @@ const CommentForm = ({ postId, parentId, onSuccess }: CommentFormProps) => {
 
         <Button
           type="submit"
+          className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
           disabled={!content.trim() || isPending}
           isLoading={isPending}
           rightIcon={<Send className="w-4 h-4" />}

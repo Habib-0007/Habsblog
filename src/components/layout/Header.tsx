@@ -132,12 +132,21 @@ const Header = () => {
             ) : (
               <>
                 <Link to="/login">
-                  <Button variant="outline" size="sm">
+                  <Button
+                    className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
+                    variant="outline"
+                    size="sm"
+                  >
                     Login
                   </Button>
                 </Link>
                 <Link to="/register">
-                  <Button size="sm">Register</Button>
+                  <Button
+                    className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
+                    size="sm"
+                  >
+                    Register
+                  </Button>
                 </Link>
               </>
             )}
@@ -216,12 +225,17 @@ const Header = () => {
               ) : (
                 <div className="flex flex-col space-y-2">
                   <Link to="/login" onClick={() => setIsMenuOpen(false)}>
-                    <Button variant="outline" className="w-full">
+                    <Button
+                      className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white w-full"
+                      variant="outline"
+                    >
                       Login
                     </Button>
                   </Link>
                   <Link to="/register" onClick={() => setIsMenuOpen(false)}>
-                    <Button className="w-full">Register</Button>
+                    <Button className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white w-full">
+                      Register
+                    </Button>
                   </Link>
                 </div>
               )}

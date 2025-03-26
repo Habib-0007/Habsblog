@@ -1,5 +1,3 @@
-'use client';
-
 import type React from 'react';
 
 import { useState, useEffect } from 'react';
@@ -260,6 +258,7 @@ const EditPost = () => {
             <Button
               type="button"
               variant="outline"
+              className="bg-gradient-to-r from-gray-500 to-gray-500 text-white hover:from-gray-600 hover:to-gray-600"
               onClick={(e) => handleSubmit(e, 'draft')}
               isLoading={isPending && status === 'draft'}
             >
@@ -268,6 +267,8 @@ const EditPost = () => {
 
             <Button
               type="button"
+              variant="outline"
+              className="bg-gradient-to-r from-blue-500 to-blue-500 text-white hover:from-blue-600 hover:to-blue-600"
               onClick={(e) => handleSubmit(e, 'published')}
               isLoading={isPending && status === 'published'}
               leftIcon={<Save className="w-4 h-4" />}

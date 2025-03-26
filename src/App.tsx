@@ -5,8 +5,8 @@ import Layout from './components/layout/Layout';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import AdminRoute from './components/auth/AdminRoute';
 import LoadingScreen from './components/ui/LoadingScreen';
+import ScrollToTop from './helpers/ScrollToTop';
 
-// Lazy loaded pages
 const Home = lazy(() => import('./pages/Home'));
 const Login = lazy(() => import('./pages/auth/Login'));
 const Register = lazy(() => import('./pages/auth/Register'));
@@ -27,10 +27,11 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Suspense fallback={<LoadingScreen />}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            {/* Public routes */}
+            {}
             <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
@@ -38,7 +39,7 @@ function App() {
             <Route path="reset-password/:token" element={<ResetPassword />} />
             <Route path="posts/:id" element={<PostDetails />} />
 
-            {/* Protected routes */}
+            {}
             <Route element={<ProtectedRoute />}>
               <Route path="profile" element={<Profile />} />
               <Route path="profile/edit" element={<EditProfile />} />
@@ -47,7 +48,7 @@ function App() {
               <Route path="posts/drafts" element={<UserDrafts />} />
             </Route>
 
-            {/* Admin routes */}
+            {}
             <Route element={<AdminRoute />}>
               <Route path="admin/dashboard" element={<AdminDashboard />} />
               <Route path="admin/users" element={<AdminUsers />} />
@@ -55,7 +56,7 @@ function App() {
               <Route path="admin/comments" element={<AdminComments />} />
             </Route>
 
-            {/* 404 and redirects */}
+            {}
             <Route path="404" element={<NotFound />} />
             <Route path="*" element={<Navigate to="/404" replace />} />
           </Route>

@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -61,13 +59,13 @@ const MarkdownEditor = ({
         <TabList className="flex border-b-2 border-black mb-4">
           <Tab
             className="px-4 py-2 font-bold cursor-pointer border-2 border-black border-b-0 mr-2 rounded-t-md"
-            selectedClassName="bg-primary text-white"
+            selectedClassName="bg-blue-500 text-white"
           >
             Write
           </Tab>
           <Tab
             className="px-4 py-2 font-bold cursor-pointer border-2 border-black border-b-0 rounded-t-md"
-            selectedClassName="bg-primary text-white"
+            selectedClassName="bg-blue-500 text-white"
           >
             Preview
           </Tab>
