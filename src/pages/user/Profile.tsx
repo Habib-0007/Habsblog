@@ -1,6 +1,4 @@
-'use client';
-
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Edit, Calendar, FileText } from 'lucide-react';
 import Card from '../../components/ui/Card';
@@ -9,14 +7,14 @@ import Avatar from '../../components/ui/Avatar';
 import { useAuthStore } from '../../store/authStore';
 import { usePosts } from '../../hooks/usePosts';
 import PostCard from '../../components/posts/PostCard';
-import { formatDate } from '../../lib/utils';
+// import { formatDate } from '../../lib/utils';
 
 const Profile = () => {
-  const { user, getProfile } = useAuthStore();
+  const { user } = useAuthStore();
 
-  useEffect(() => {
-    getProfile().catch(console.error);
-  }, [getProfile]);
+  // useEffect(() => {
+  //   getProfile().catch(console.error);
+  // }, [getProfile]);
 
   const { data: postsData, isLoading: isLoadingPosts } = usePosts({
     author: user?._id,
