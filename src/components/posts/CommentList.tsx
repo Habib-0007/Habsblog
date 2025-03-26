@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { MessageSquare, ThumbsUp, Reply, Trash2 } from 'lucide-react';
 import Avatar from '../ui/Avatar';

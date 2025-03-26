@@ -1,5 +1,3 @@
-'use client';
-
 import Badge from '../ui/Badge';
 
 import type React from 'react';

@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Calendar, ThumbsUp, Eye, Edit, Trash2, ArrowLeft } from 'lucide-react';

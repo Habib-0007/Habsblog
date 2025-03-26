@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { Shield, Trash2 } from 'lucide-react';
 import Card from '../../components/ui/Card';
