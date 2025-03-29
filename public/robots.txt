@@ -1,5 +1,3 @@
-</antArtifact><antArtifact identifier="robots-txt" type="application/vnd.ant.code" language="text" title="robots.txt">
-
 User-agent: *
 Allow: /
 Allow: /login
