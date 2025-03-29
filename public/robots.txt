@@ -1,0 +1,20 @@
+</antArtifact><antArtifact identifier="robots-txt" type="application/vnd.ant.code" language="text" title="robots.txt">
+
+User-agent: *
+Allow: /
+Allow: /login
+Allow: /register
+Allow: /forgot-password
+Allow: /posts/*
+
+# Disallow protected and admin routes
+Disallow: /profile
+Disallow: /profile/edit
+Disallow: /posts/create
+Disallow: /posts/edit/*
+Disallow: /posts/drafts
+Disallow: /admin/*
+Disallow: /reset-password/*
+
+# Sitemap location
+Sitemap: https://habsblog.vercel.app/sitemap.xml
