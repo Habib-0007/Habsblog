@@ -135,7 +135,7 @@ const EditPost = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <Card className="p-6">
+      <Card className="md:p-6">
         <h1 className="text-3xl font-bold mb-6 gradient-text">Edit Post</h1>
 
         <form className="space-y-6">
@@ -236,7 +236,7 @@ const EditPost = () => {
               <Button
                 type="button"
                 onClick={handleAddTag}
-                className="ml-2"
+                className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
                 leftIcon={<Tag className="w-4 h-4" />}
               >
                 Add
@@ -258,7 +258,7 @@ const EditPost = () => {
             <Button
               type="button"
               variant="outline"
-              className="bg-gradient-to-r from-gray-500 to-gray-500 text-white hover:from-gray-600 hover:to-gray-600"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
               onClick={(e) => handleSubmit(e, 'draft')}
               isLoading={isPending && status === 'draft'}
             >
@@ -268,7 +268,7 @@ const EditPost = () => {
             <Button
               type="button"
               variant="outline"
-              className="bg-gradient-to-r from-blue-500 to-blue-500 text-white hover:from-blue-600 hover:to-blue-600"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white"
               onClick={(e) => handleSubmit(e, 'published')}
               isLoading={isPending && status === 'published'}
               leftIcon={<Save className="w-4 h-4" />}

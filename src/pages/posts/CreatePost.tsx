@@ -103,7 +103,7 @@ const CreatePost = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <Card className="p-6">
+      <Card className="md:p-6">
         <h1 className="text-3xl font-bold mb-6 gradient-text">
           Create New Post
         </h1>

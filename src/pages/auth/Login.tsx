@@ -20,7 +20,6 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Get the redirect path from location state or default to home
   const from = (location.state as any)?.from?.pathname || '/';
 
   const validate = () => {

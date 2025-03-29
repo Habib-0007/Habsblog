@@ -128,6 +128,7 @@ const EditProfile = () => {
               <Button
                 type="button"
                 variant="outline"
+                className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
                 leftIcon={<Upload className="w-4 h-4" />}
               >
                 Change Profile Picture
@@ -158,13 +159,13 @@ const EditProfile = () => {
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             placeholder="Tell us about yourself..."
-            // leftIcon={<FileText className="w-4 h-4" />}
           />
 
           <div className="flex justify-end gap-4">
             <Button
               type="button"
               variant="outline"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
               onClick={() => navigate('/profile')}
             >
               Cancel
@@ -172,6 +173,7 @@ const EditProfile = () => {
 
             <Button
               type="submit"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
               isLoading={isSubmitting}
               leftIcon={<Save className="w-4 h-4" />}
             >

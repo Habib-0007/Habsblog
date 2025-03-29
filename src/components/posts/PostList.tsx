@@ -79,6 +79,7 @@ const PostList = ({ posts, isLoading, onSearch, onFilter }: PostListProps) => {
 
           <Button
             variant="outline"
+            className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
             leftIcon={<Filter className="w-4 h-4" />}
             onClick={() => setShowFilters(!showFilters)}
           >
@@ -93,7 +94,7 @@ const PostList = ({ posts, isLoading, onSearch, onFilter }: PostListProps) => {
               {allTags.map((tag) => (
                 <Badge
                   key={tag}
-                  className="cursor-pointer hover:bg-primary hover:text-white"
+                  className="cursor-pointer bg-blue-500 hover:bg-blue-600 hover:text-white"
                   onClick={() => handleTagFilter(tag)}
                 >
                   {tag}

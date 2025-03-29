@@ -23,7 +23,7 @@ const PostCard = ({ post }: PostCardProps) => {
         </div>
       )}
 
-      <div className="flex-1 p-4">
+      <div className="flex-1 py-4 md:px-2">
         <div className="flex items-center space-x-2 mb-3">
           {post.tags &&
             post.tags.slice(0, 3).map((tag, index) => (

@@ -13,7 +13,6 @@ const Home = () => {
     limit: 9,
   });
 
-  // Initialize filters from URL params
   useEffect(() => {
     const search = searchParams.get('search');
     const tag = searchParams.get('tag');

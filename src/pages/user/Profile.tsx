@@ -51,6 +51,7 @@ const Profile = () => {
                 <Button
                   variant="outline"
                   size="sm"
+                  className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
                   leftIcon={<Edit className="w-4 h-4" />}
                 >
                   Edit Profile
@@ -83,7 +84,12 @@ const Profile = () => {
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-bold">Your Posts</h2>
           <Link to="/posts/create">
-            <Button size="sm">Write New Post</Button>
+            <Button
+              size="sm"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
+            >
+              Write New Post
+            </Button>
           </Link>
         </div>
 
@@ -129,7 +135,11 @@ const Profile = () => {
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-bold">Your Drafts</h2>
           <Link to="/posts/drafts">
-            <Button variant="outline" size="sm">
+            <Button
+              variant="outline"
+              size="sm"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
+            >
               View All Drafts
             </Button>
           </Link>

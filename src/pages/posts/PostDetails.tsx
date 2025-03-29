@@ -104,7 +104,7 @@ const PostDetails = () => {
           </div>
         )}
 
-        <div className="p-6">
+        <div className="md:p-6">
           <div className="flex flex-wrap gap-2 mb-4">
             {post.tags.map((tag: any, index: number) => (
               <Badge key={index} variant="outline">
