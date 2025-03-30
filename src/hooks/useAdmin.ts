@@ -2,7 +2,6 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 import api from '../lib/api';
 
-// Get dashboard stats
 export const useDashboardStats = () => {
   return useQuery({
     queryKey: ['admin', 'dashboard'],
@@ -13,7 +12,6 @@ export const useDashboardStats = () => {
   });
 };
 
-// Get all users (admin only)
 export const useUsers = (page = 1, limit = 10) => {
   return useQuery({
     queryKey: ['admin', 'users', page, limit],
@@ -26,7 +24,6 @@ export const useUsers = (page = 1, limit = 10) => {
   });
 };
 
-// Get all posts (admin only)
 export const useAdminPosts = (page = 1, limit = 10) => {
   return useQuery({
     queryKey: ['admin', 'posts', page, limit],
@@ -39,7 +36,6 @@ export const useAdminPosts = (page = 1, limit = 10) => {
   });
 };
 
-// Get all comments (admin only)
 export const useAdminComments = (page = 1, limit = 10) => {
   return useQuery({
     queryKey: ['admin', 'comments', page, limit],
@@ -52,7 +48,6 @@ export const useAdminComments = (page = 1, limit = 10) => {
   });
 };
 
-// Update user role (admin only)
 export const useUpdateUserRole = () => {
   const queryClient = useQueryClient();
 
@@ -77,7 +72,6 @@ export const useUpdateUserRole = () => {
   });
 };
 
-// Delete user (admin only)
 export const useDeleteUser = () => {
   const queryClient = useQueryClient();
 

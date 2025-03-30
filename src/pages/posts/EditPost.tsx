@@ -100,7 +100,6 @@ const EditPost = () => {
       formData.append('tags', JSON.stringify(tags));
     }
 
-
     formData.append('status', saveStatus);
 
     updatePost(

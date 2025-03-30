@@ -1,4 +1,3 @@
-// import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Edit, Calendar, FileText } from 'lucide-react';
 import Card from '../../components/ui/Card';
@@ -7,14 +6,9 @@ import Avatar from '../../components/ui/Avatar';
 import { useAuthStore } from '../../store/authStore';
 import { usePosts } from '../../hooks/usePosts';
 import PostCard from '../../components/posts/PostCard';
-// import { formatDate } from '../../lib/utils';
 
 const Profile = () => {
   const { user } = useAuthStore();
-
-  // useEffect(() => {
-  //   getProfile().catch(console.error);
-  // }, [getProfile]);
 
   const { data: postsData, isLoading: isLoadingPosts } = usePosts({
     author: user?._id,
@@ -62,7 +56,7 @@ const Profile = () => {
             <div className="flex flex-col md:flex-row gap-4 mb-4 text-muted-foreground">
               <div className="flex items-center justify-center md:justify-start">
                 <Calendar className="w-4 h-4 mr-2" />
-                {/* <span>Joined {formatDate(user.createdAt)}</span> */}
+                {}
               </div>
 
               <div className="flex items-center justify-center md:justify-start">

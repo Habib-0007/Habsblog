@@ -20,7 +20,6 @@ const PostList = ({ posts, isLoading, onSearch, onFilter }: PostListProps) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
 
-  // Extract all unique tags from posts
   const allTags = Array.from(new Set(posts.flatMap((post) => post.tags || [])));
 
   const handleSearch = (e: React.FormEvent) => {

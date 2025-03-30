@@ -26,6 +26,8 @@ const CreatePost = () => {
     content?: string;
   }>({});
 
+  setStatus;
+
   const navigate = useNavigate();
   const { mutate: createPost, isPending } = useCreatePost();
 

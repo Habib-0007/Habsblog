@@ -23,11 +23,9 @@ const CommentForm = ({ postId, parentId, onSuccess }: CommentFormProps) => {
     if (e.target.files) {
       const selectedFiles = Array.from(e.target.files);
 
-      // Limit to 3 images
       const newImages = [...images, ...selectedFiles].slice(0, 3);
       setImages(newImages);
 
-      // Create preview URLs
       const newPreviewUrls = newImages.map((file) => URL.createObjectURL(file));
       setPreviewUrls(newPreviewUrls);
     }

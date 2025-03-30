@@ -35,7 +35,6 @@ const MarkdownEditor = ({
     const newText = beforeText + prefix + selectedText + suffix + afterText;
     onChange(newText);
 
-    // Set cursor position after the operation
     setTimeout(() => {
       textarea.focus();
       textarea.setSelectionRange(start + prefix.length, end + prefix.length);
