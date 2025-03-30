@@ -26,8 +26,6 @@ const CreatePost = () => {
     content?: string;
   }>({});
 
-  console.log(setStatus);
-
   const navigate = useNavigate();
   const { mutate: createPost, isPending } = useCreatePost();
 
@@ -86,6 +84,8 @@ const CreatePost = () => {
     if (tags.length > 0) {
       formData.append('tags', JSON.stringify(tags));
     }
+
+    console.log(JSON.stringify(tags));
 
     formData.append('status', saveStatus);
 

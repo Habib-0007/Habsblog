@@ -118,21 +118,19 @@ const EditProfile = () => {
               className="w-32 h-32 mb-4"
             />
 
-            <label className="cursor-pointer">
+            <label
+              htmlFor="avatar"
+              className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white w-full h-full cursor-pointer neobrutalism-button flex items-center justify-center gap-2 rounded-md transition-all neobrutalism-shadow hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
+            >
               <input
                 type="file"
                 accept="image/*"
                 onChange={handleAvatarChange}
                 className="hidden"
+                id="avatar"
+                name="avatar"
               />
-              <Button
-                type="button"
-                variant="outline"
-                className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white ml-2"
-                leftIcon={<Upload className="w-4 h-4" />}
-              >
-                Change Profile Picture
-              </Button>
+              <Upload className="w-4 h-4" /> Change Profile Picture
             </label>
           </div>
 

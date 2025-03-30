@@ -154,20 +154,20 @@ const Register = () => {
                 </div>
               )}
 
-              <label className="cursor-pointer">
+              <label
+                className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white cursor-pointer neobrutalism-button rounded-md transition-all flex justify-center gap-2 items-center neobrutalism-shadow hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none"
+                htmlFor="avatar"
+              >
                 <input
                   type="file"
                   accept="image/*"
                   onChange={handleAvatarChange}
                   className="hidden"
+                  id="avatar"
+                  name="avatar"
                 />
-                <Button
-                  type="button"
-                  variant="outline"
-                  leftIcon={<Upload className="w-4 h-4" />}
-                >
-                  {avatarPreview ? 'Change Image' : 'Upload Image'}
-                </Button>
+                <Upload className="w-4 h-4" />
+                {avatarPreview ? 'Change Image' : 'Upload Image'}
               </label>
             </div>
           </div>
