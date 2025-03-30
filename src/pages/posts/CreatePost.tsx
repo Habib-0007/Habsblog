@@ -85,8 +85,6 @@ const CreatePost = () => {
       formData.append('tags', JSON.stringify(tags));
     }
 
-    console.log(JSON.stringify(tags));
-
     formData.append('status', saveStatus);
 
     createPost(formData, {
